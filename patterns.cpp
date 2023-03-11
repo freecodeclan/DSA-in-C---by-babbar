@@ -495,23 +495,81 @@ int main(){
         * * 
         *       */
 
-       #include<iostream>
-       using namespace std; 
-       
-       int main(){
-        int i = 1;
-        int n = 4;
-        while(i<=n){
-            int j = 1;
-            
-            while(j<=i){
-                int s = (n-i+1);
-                cout<<"*";
-                s =s+1;
-                j++;
-            }
-            cout<<endl;
-            i++;
+#include<iostream>
+using namespace std; 
+
+int main(){
+    int i = 1;
+    int n = 4;
+    while(i<=n){
+        int j = 1;
+        while(j<=n-i+1){ //- We created a formula "n-i+1" to see the relation between the columns and rows.
+            cout<<"*";
+            j++;
+        }cout<<endl;
+        i++;
+    }
+    return 0;
+}
+
+/*Example 21 - Draw a pattern 
+    
+    * * * * 
+      * * *
+        * *
+          *        */
+
+#include<iostream>
+using namespace std; 
+
+int main(){
+    int i = 1;
+    int n;
+    cout<<"Enter the value for n: "<<endl;
+    cin>>n;
+
+    while(i<=n){
+        int space = i-1;
+        while(space){
+            cout<<" ";
+            space = space-1;
         }
-        return 0;
-       }
+        int j = 1;
+        while(j<=n-i+1){
+            cout<<"*";
+            j++;
+        }cout<<endl;
+        i++;
+    }
+    return 0;
+}
+
+/*Example 22 - Draw a pattern 
+    
+    1 1 1 1
+      2 2 2
+        3 3
+          4     */
+
+#include<iostream>
+using namespace std; 
+
+int main(){
+    int i = 1;
+    int n = 4;
+    while(i<=n){
+        int space = i-1;
+        while(space){
+            cout<<" ";
+            space = space-1;
+        }
+        int j = 1;
+        while(j<=n-i+1){
+            cout<<i;
+            j++;
+        }
+        cout<<endl;
+        i++;
+    } 
+    return 0;
+}
