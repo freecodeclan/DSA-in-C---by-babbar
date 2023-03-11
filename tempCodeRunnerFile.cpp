@@ -3,7 +3,9 @@ using namespace std;
 
 int main(){
     int i = 1;
-    int n = 4;
+    int n;
+    cout<<"Enter the value of n: "<<endl;
+    cin>>n;
     
 
     while(i<=n){
