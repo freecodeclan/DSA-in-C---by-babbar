@@ -6,21 +6,25 @@ int main(){
     int n;
     cout<<"Enter the value of n: "<<endl;
     cin>>n;
-    int count = 1;
 
     while(i<=n){
-        int space = n-i;
-        while(space){
+        int s = n-i;
+        while(s){
             cout<<" ";
-            space = space-1;
+            s = s-1;
         }
         int j = 1;
         while(j<=i){
-            cout<<count;
-            count = count+1;
+            cout<<j;
             j++;
+        }
+        int k = i-1;
+        while(k){
+            cout<<k;
+            k = k-1;
         }
         cout<<endl;
         i++;
     }
+    return 0;
 }
