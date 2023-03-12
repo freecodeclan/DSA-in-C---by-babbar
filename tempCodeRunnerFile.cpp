@@ -13,7 +13,7 @@ int main(){
             cout<<j;
             j++;
         }
-        int s = i-1;
+        int s = 2*i-2;
             while(s){
                 cout<<"*";
                 s = s-1;
