@@ -6,23 +6,23 @@ int main(){
     cout<<"Enter the value of n: ";
     cin>>n;
 
-    int i = 1;
-    while(i<=n){
+    int i = 0;
+    while(i<n){
         int j = 1;
-        while(j<=n-i+1){
+        while(j<n-i+1){
             cout<<j;
             j++;
         }
-        int s = 2*i-2;
+        int s = 2*i;
             while(s){
                 cout<<"*";
                 s = s-1;
         }
-        /*int k = 1;
-        while(k<=n-i+1){
-            cout<<n-j+1;
-            k++;
-        }*/
+        int k = n;
+        while(k>i){
+            cout<<k-i;
+            k--;
+        }
         cout<<endl;
         i++;
     }
