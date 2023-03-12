@@ -18,6 +18,11 @@ int main(){
                 cout<<"*";
                 s = s-1;
         }
+        /*int k = 1;
+        while(k<=n-i+1){
+            cout<<n-j+1;
+            k++;
+        }*/
         cout<<endl;
         i++;
     }
