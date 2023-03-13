@@ -11,5 +11,11 @@ int main(){
     cout<<" a|b "<< (a|b) << endl;
     cout<<" ~a "<< (~a) << endl;
     cout<<" a^b "<< (a^b) << endl;
-    return 0;
+   
+
+    cout<< (17>>1) <<endl; //- right shift 17 by 1 is 17/2
+    cout<< (21>>2) <<endl; //- right shift 21 by 2 is 21/2*2
+    cout<< (17<<1) <<endl; //- left shift 17 by 1 is 17*2
+    cout<< (21<<2) <<endl; //- left shift 21 by 2 is 21*4
+
 }
