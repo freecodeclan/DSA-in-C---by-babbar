@@ -19,3 +19,18 @@ int main(){
     cout<< (21<<2) <<endl; //- left shift 21 by 2 is 21*4
 
 }
+
+//- Example for Pre & Post Increment/Decrement 
+
+#include<iostream>
+using namespace std; 
+
+int main(){
+    int i = 7;
+
+    cout<< (++i) <<endl; // Post Increment
+    cout<< (i++) <<endl; // Pre increment 
+    cout<< (i--) <<endl; // Post decrement  
+    cout<< (--i) <<endl; // Pre decrement 
+    return 0;
+}
