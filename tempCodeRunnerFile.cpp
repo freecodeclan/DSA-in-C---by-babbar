@@ -2,11 +2,21 @@
 using namespace std; 
 
 int main(){
-    int i = 7;
+    int n; 
+    cout<<"Enter the value of n: ";
+    cin>>n;
 
-    cout<< (++i) <<endl; // Post Increment
-    cout<< (i++) <<endl; // Pre increment 
-    cout<< (i--) <<endl; // Post decrement  
-    cout<< (--i) <<endl; // Pre decrement 
+    int a = 0;
+    int b = 1;
+    cout<<a<<" "<<b<<" ";
+
+    for(int i = 1; i<=n; i++){
+        int sum = a+b;
+        cout<<sum<<" ";
+
+        a=b;
+        b=sum;
+    }
+    
     return 0;
 }
