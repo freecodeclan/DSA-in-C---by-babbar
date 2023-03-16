@@ -2,21 +2,19 @@
 using namespace std; 
 
 int main(){
-    int n; 
-    cout<<"Enter the value of n: ";
-    cin>>n;
+    int n = 234;
 
-    int a = 0;
-    int b = 1;
-    cout<<a<<" "<<b<<" ";
+    int product = 1;
+    int sum = 0;
 
-    for(int i = 1; i<=n; i++){
-        int sum = a+b;
-        cout<<sum<<" ";
+    while(n!=0){
+        int digit = n%10;
+        product = product * digit;
+        sum = sum + digit;
 
-        a=b;
-        b=sum;
+        n = n/10;
     }
+    int answer = product - sum;
     
     return 0;
 }
