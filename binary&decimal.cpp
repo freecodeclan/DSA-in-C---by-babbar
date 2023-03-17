@@ -1,3 +1,5 @@
+/* Example to convert decimal number into binary number */
+
 #include<iostream>
 #include<math.h> //- Used to include maths formulas 
 using namespace std; 
