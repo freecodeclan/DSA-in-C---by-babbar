@@ -40,7 +40,7 @@ int main(){
     int ans = 0;
 
     while(n != 0){
-        int digit = n % 10;
+        int digit = n % 10; //- use to break any number into digit 
         if(digit == 1){
             ans = ans + pow(2, i);
         }
