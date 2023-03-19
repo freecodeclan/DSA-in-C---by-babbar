@@ -1,3 +1,6 @@
+/*Example 1 - Reverse the number 
+    n = 123. */
+
 #include <iostream>
 using namespace std;
 
