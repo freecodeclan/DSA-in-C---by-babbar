@@ -1,3 +1,4 @@
+/* Using Switch statement make an small calculator */
 #include<iostream>
 using namespace std; 
 
