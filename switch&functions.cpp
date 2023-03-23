@@ -32,7 +32,7 @@ int main(){
         case '%' : cout << (a%b) <<endl;
                    break;
 
-        default : "This is default case";
+        default : cout << "Please Enter a valid operation" << endl;
     }
     return 0;
 }
