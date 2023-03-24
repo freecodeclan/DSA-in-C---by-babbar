@@ -61,6 +61,4 @@ int main(){
     cin>> n >> r;
 
     cout<<"Answer is " << nCr(n,r) <<endl;
-    
-    
 }
