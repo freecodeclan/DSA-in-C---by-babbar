@@ -1,37 +1,25 @@
 #include<iostream>
 using namespace std; 
 
-int main(){
-    int a, b;
-    
-    cout<<"Enter the value of a: "<<endl;
-    cin>>a;
-    
-    cout<<"Enter the value of b: "<<endl;
-    cin>>b;
-
-    char op;
-    cout<<"Enter the operation you want to perform "<<endl;
-    cin>>op;
-
-    switch(op)
-    {
-        case '+' : cout << (a+b) <<endl;
-                   break;
-
-        case '-' : cout << (a-b) <<endl;
-                   break;
-
-        case '*' : cout << (a*b) <<endl;
-                   break;
-
-        case '/' : cout << (a/b) <<endl;
-                   break;
-
-        case '%' : cout << (a%b) <<endl;
-                   break;
-
-        default : cout << "Please Enter a valid operation" << endl;
+int factorial(int n){
+    int fact = 1;
+    for(int i = 1; i<=n; i++){
+        fact = fact * i;
     }
-    return 0;
+    return fact;
+}
+
+int nCr(int n, int r){
+    int nume = factorial(n);
+    int deno = factorial(r) * factorial(n-r);
+    return nume/deno;
+}
+
+int main(){
+    int n, r;
+    cin>> n >> r;
+
+    cout<<"Answer is " << nCr(n,r) <<endl;
+    
+    
 }
