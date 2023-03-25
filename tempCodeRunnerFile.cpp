@@ -1,23 +1,19 @@
 #include<iostream>
-using namespace std; 
+using namespace std;
 
-int factorial(int n){
-    int fact = 1;
+void printCounting(int n){
+
     for(int i = 1; i<=n; i++){
-        fact = fact * i;
+        cout<< i << " ";
     }
-    return fact;
+    cout<<endl;
 }
-
-int nCr(int n, int r){
-    int nume = factorial(n);
-    int deno = factorial(r) * factorial(n-r);
-    return nume/deno;
-}
-
 int main(){
-    int n, r;
-    cin>> n >> r;
+    int n;
+    cout<<"Enter the value of n: ";
+    cin>>n;
 
-    cout<<"Answer is " << nCr(n,r) <<endl;
+    printCounting(n);
+    
+    return 0;
 }
