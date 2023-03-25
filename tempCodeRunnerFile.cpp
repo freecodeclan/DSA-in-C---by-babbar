@@ -1,19 +1,23 @@
 #include<iostream>
-using namespace std;
-
-void printCounting(int n){
-
-    for(int i = 1; i<=n; i++){
-        cout<< i << " ";
+using namespace std; 
+bool isPrime(int n){
+    for(int i = 2; i<n; i++){
+        if(n%i==0){
+            return 0;
+        }
+        return 1;
     }
-    cout<<endl;
 }
 int main(){
     int n;
     cout<<"Enter the value of n: ";
     cin>>n;
 
-    printCounting(n);
-    
-    return 0;
+    if(isPrime(n)){
+        
+        cout<<"Is a prime number. "<<endl;
+}
+    else{
+        cout<<"Is not a prime number. "<<endl;
+    }        
 }
