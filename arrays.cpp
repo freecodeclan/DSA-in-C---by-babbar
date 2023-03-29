@@ -1,3 +1,4 @@
+/* Initilization of an array with only 2 values. */
 #include<iostream>
 using namespace std; 
 
