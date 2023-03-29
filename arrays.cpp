@@ -29,6 +29,9 @@ void printarr(int arr[], int size){
 int main(){
     int first[10] = {2, 7}; 
     printarr(first, 10);
+
+    int firstsize = sizeof(first)/sizeof(int); //- Used to find the size of an array 
+    cout<<"The size of first array is: "<< firstsize << endl;
     
     int second[5] = {2, 4, 6, 8, 10};
     printarr(second, 5);
