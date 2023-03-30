@@ -1,23 +1,34 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std; 
 
-//- Function Created for an array
-void printarr(int arr[], int size){
-    cout<<"Printing an array "<<endl;
-    for(int i = 0; i<size; i++){
-        cout<<arr[i]<<" ";
+int getmin(int num[], int n){
+    int mini = INT_MAX;
+    for(int i = 0; i<n; i++){
+        mini = min(mini, num[i]);
     }
+    return mini;
+}
+
+int getmax(int num[], int n){
+    int maxi = INT_MIN;
+    for(int i = 0; i<n; i++){
+        maxi = max(maxi, num[i]);
+    }
+    return maxi;
 }
 
 int main(){
-    int first[10] = {2, 7}; 
-    printarr(first, 10);
+    int size;
+    cout<< "Enter the value for an size of an array: ";
+    cin>>size;
 
-    int firstsize = sizeof(first)/sizeof(int);
-    cout<<"The size of first array is: "<< firstsize << endl;
-    
-    int second[5] = {2, 4, 6, 8, 10};
-    printarr(second, 5);
+    int num[50];
+
+    for(int i = 0; i<size; i++){
+        cin>>num[i];
+    }
+    cout<<"Maximum Value is: " << getmax(num, size) << endl;
+    cout<<"Minimum Value is: " << getmin(num, size) << endl;
     
     return 0;
 }
