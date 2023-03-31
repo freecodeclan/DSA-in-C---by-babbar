@@ -1,34 +1,31 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std; 
 
-int getmin(int num[], int n){
-    int mini = INT_MAX;
-    for(int i = 0; i<n; i++){
-        mini = min(mini, num[i]);
+bool search(int arr[], int size, int key){
+    for(int i = 0; i<size; i++){
+        if(arr[i]==key){
+            return 1;
+        }
     }
-    return mini;
-}
-
-int getmax(int num[], int n){
-    int maxi = INT_MIN;
-    for(int i = 0; i<n; i++){
-        maxi = max(maxi, num[i]);
-    }
-    return maxi;
+    return 0;
 }
 
 int main(){
-    int size;
-    cout<< "Enter the value for an size of an array: ";
-    cin>>size;
+    int arr[10] = {5, 7, -2, 10, 22, -2, 0 ,5, 22, 1};
 
-    int num[50];
+    cout<<"Enter the element to search: "<<endl;
+    int key;
+    cin>>key;
 
-    for(int i = 0; i<size; i++){
-        cin>>num[i];
+    bool found = search(arr, 10, key);
+
+    if(found){
+        cout << "Key is present " << endl;
     }
-    cout<<"Maximum Value is: " << getmax(num, size) << endl;
-    cout<<"Minimum Value is: " << getmin(num, size) << endl;
+    else{
+        cout <<"Key is absent"<< endl;
+    }
+    
     
     return 0;
 }
