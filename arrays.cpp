@@ -109,3 +109,50 @@ int main(){
     
     return 0;
 }
+
+/*Example - Reverse an array
+    
+    arr = {2, 6, 8, 10, -1}  
+    brr = {4,6,10,-2,-1,12}     */
+
+#include<iostream>
+using namespace std; 
+
+//- Using reverse function to reverse an array 
+void reverse(int arr[], int n){
+    int start = 0;
+    int end = n-1;
+
+    while(start<=end){
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
+    }
+}
+
+//- Print function for an array
+void printArray(int arr[], int n){
+
+    for(int i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+int main(){
+    int arr[6] = {2, 6, 8, 10, -15,11};
+    int brr[5] = {4,6,10,-2,-1};
+
+    reverse(arr, 6);
+    reverse(brr, 5);
+
+    printArray(arr, 6);
+    printArray(brr, 5);
+
+    return 0;
+}
+  
+
+
+
+
+

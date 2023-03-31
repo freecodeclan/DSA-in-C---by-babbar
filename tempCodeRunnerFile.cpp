@@ -1,31 +1,35 @@
 #include<iostream>
 using namespace std; 
 
-bool search(int arr[], int size, int key){
-    for(int i = 0; i<size; i++){
-        if(arr[i]==key){
-            return 1;
-        }
+//- Using reverse function to reverse an array 
+void reverse(int arr[], int n){
+    int start = 0;
+    int end = n-1;
+
+    while(start<=end){
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
     }
-    return 0;
 }
 
+//- Print function for an array
+void printArray(int arr[], int n){
+
+    for(int i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
 int main(){
-    int arr[10] = {5, 7, -2, 10, 22, -2, 0 ,5, 22, 1};
+    int arr[6] = {2, 6, 8, 10, -15,11};
+    int brr[5] = {4,6,10,-2,-1};
 
-    cout<<"Enter the element to search: "<<endl;
-    int key;
-    cin>>key;
+    reverse(arr, 6);
+    reverse(brr, 5);
 
-    bool found = search(arr, 10, key);
+    printArray(arr, 6);
+    printArray(brr, 5);
 
-    if(found){
-        cout << "Key is present " << endl;
-    }
-    else{
-        cout <<"Key is absent"<< endl;
-    }
-    
-    
     return 0;
 }
