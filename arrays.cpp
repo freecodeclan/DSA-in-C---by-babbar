@@ -76,7 +76,7 @@ int main(){
     return 0;
 }
 
-/* Whether 1 is present in an array */
+/* Exapmle - Whether 1 is present in an array */
 
 #include<iostream>
 using namespace std; 
