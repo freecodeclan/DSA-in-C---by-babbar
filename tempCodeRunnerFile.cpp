@@ -1,35 +1,34 @@
-#include<iostream>
+#include<iostream> //- header file used for INT_MAX & INT_MIN
 using namespace std; 
 
-//- Using reverse function to reverse an array 
-void reverse(int arr[], int n){
-    int start = 0;
-    int end = n-1;
-
-    while(start<=end){
-        swap(arr[start], arr[end]);
-        start++;
-        end--;
+int getmin(int num[], int n){
+    int mini = INT_MAX;
+    for(int i = 0; i<n; i++){
+        mini = min(mini, num[i]);
     }
+    return mini;
 }
 
-//- Print function for an array
-void printArray(int arr[], int n){
-
-    for(int i=0; i<n; i++){
-        cout << arr[i] << " ";
+int getmax(int num[], int n){
+    int maxi = INT_MIN;
+    for(int i = 0; i<n; i++){
+        maxi = max(maxi, num[i]);
     }
-    cout << endl;
+    return maxi;
 }
+
 int main(){
-    int arr[6] = {2, 6, 8, 10, -15,11};
-    int brr[5] = {4,6,10,-2,-1};
+    int size;
+    cout<< "Enter the value for an size of an array: ";
+    cin>>size;
 
-    reverse(arr, 6);
-    reverse(brr, 5);
+    int num[50];
 
-    printArray(arr, 6);
-    printArray(brr, 5);
-
+    for(int i = 0; i<size; i++){
+        cin>>num[i];
+    }
+    cout<<"Maximum Value is: " << getmax(num, size) << endl;
+    cout<<"Minimum Value is: " << getmin(num, size) << endl;
+    
     return 0;
 }

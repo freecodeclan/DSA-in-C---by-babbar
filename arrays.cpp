@@ -41,7 +41,8 @@ int main(){
 
 /* Find the Minimum and Maximum element of an array */
 
-#include<bits/stdc++.h> //- header file used for INT_MAX & INT_MIN
+#include<climits>
+#include<iostream> //- header file used for INT_MAX & INT_MIN
 using namespace std; 
 
 int getmin(int num[], int n){
