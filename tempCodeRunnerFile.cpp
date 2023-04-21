@@ -1,26 +1,25 @@
 #include<iostream>
 using namespace std; 
 
-int power(int a, int b ){
-    int ans = 1;
-    
-    for(int i = 1; i<=b; i++){
-        ans = ans * a;
+bool iseven(int a){
+    if(a&1){
+        return 0;
     }
-    return ans;
+    else{
+        return 1;
+    }
 }
 
 int main(){
-    int a; 
-    int b;
-
+    int num;
     cout << "Enter the value of a: ";
-    cin >> a >> b;
+    cin >> num;
 
-    int answer = power(a,b);
-
-    cout << answer;
-    
-    
+    if(iseven(num)){
+        cout << "Number is even "<< endl;
+    }
+    else{
+        cout << "Number is odd " << endl;
+    }
     return 0;
 }
