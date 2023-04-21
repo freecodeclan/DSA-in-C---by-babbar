@@ -29,7 +29,7 @@ int main(){
         case '/' : cout << (a/b) <<endl;
                    break;
 
-        case '%' : cout << (a%b) <<endl;
+        case '%' : cout << (a%b) <<endl; 
                    break;
 
         default : cout << "Please Enter a valid operation" << endl;
@@ -109,4 +109,35 @@ int main(){
     else{
         cout<<"Is not a prime number. "<<endl;
     }        
+}
+
+/*
+Create the function to find the power of given value.
+*/
+
+#include<iostream>
+using namespace std; 
+
+int power(int a, int b ){
+    int ans = 1;
+    
+    for(int i = 1; i<=b; i++){
+        ans = ans * a;
+    }
+    return ans;
+}
+
+int main(){
+    int a; 
+    int b;
+
+    cout << "Enter the value of a: ";
+    cin >> a >> b;
+
+    int answer = power(a,b);
+
+    cout << answer;
+    
+    
+    return 0;
 }

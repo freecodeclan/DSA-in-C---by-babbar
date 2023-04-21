@@ -1,34 +1,26 @@
-#include<iostream> //- header file used for INT_MAX & INT_MIN
+#include<iostream>
 using namespace std; 
 
-int getmin(int num[], int n){
-    int mini = INT_MAX;
-    for(int i = 0; i<n; i++){
-        mini = min(mini, num[i]);
+int power(int a, int b ){
+    int ans = 1;
+    
+    for(int i = 1; i<=b; i++){
+        ans = ans * a;
     }
-    return mini;
-}
-
-int getmax(int num[], int n){
-    int maxi = INT_MIN;
-    for(int i = 0; i<n; i++){
-        maxi = max(maxi, num[i]);
-    }
-    return maxi;
+    return ans;
 }
 
 int main(){
-    int size;
-    cout<< "Enter the value for an size of an array: ";
-    cin>>size;
+    int a; 
+    int b;
 
-    int num[50];
+    cout << "Enter the value of a: ";
+    cin >> a >> b;
 
-    for(int i = 0; i<size; i++){
-        cin>>num[i];
-    }
-    cout<<"Maximum Value is: " << getmax(num, size) << endl;
-    cout<<"Minimum Value is: " << getmin(num, size) << endl;
+    int answer = power(a,b);
+
+    cout << answer;
+    
     
     return 0;
 }
