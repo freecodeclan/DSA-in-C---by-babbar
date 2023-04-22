@@ -1,23 +1,25 @@
 #include<iostream>
 using namespace std; 
-bool isPrime(int n){
-    for(int i = 2; i<n; i++){
-        if(n%i==0){
-            return 0;
+void subarray(int arr[], int size){
+    for(int sp=0; sp < size; sp++){
+        for(int ep = sp; ep <size; ep++){
+            for(int i = sp; i<=ep; i++){
+                cout << arr[i] << " ";
+            }
+            cout << endl;
         }
-        return 1;
     }
 }
 int main(){
     int n;
-    cout<<"Enter the value of n: ";
-    cin>>n;
+    cout << "Enter the size of an array: ";
+    cin >> n;
 
-    if(isPrime(n)){
-        
-        cout<<"Is a prime number. "<<endl;
-}
-    else{
-        cout<<"Is not a prime number. "<<endl;
-    }        
+    int arr[n];
+    for(int i = 0; i < n; i++){
+        cin >> arr[i];
+    }
+    subarray(arr,n);
+    
+    return 0;
 }
