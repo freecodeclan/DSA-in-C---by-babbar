@@ -272,10 +272,8 @@ else{
 }
 
 /* Print the sum of rows in 2D array*/
-
 #include<bits/stdc++.h>
 using namespace std;
-
 // To print row wise sum
 void printSum(int arr[][3], int i, int j){
     cout << "printing the sum " << endl; 
