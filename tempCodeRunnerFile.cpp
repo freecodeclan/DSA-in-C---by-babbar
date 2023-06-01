@@ -1,37 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
-int largestRowSum(int arr[][3], int i, int j){
+// Function to find maximum element in 2D Array
+int maximumInArray(int arr[][3], int r, int c){
     int maxi = INT_MIN;
-    int rowIndex = -1;
-
-    for(int i = 0; i < 3; i++){
-        int sum = 0;
-        for(int j = 0; j < 3; j++){
-            sum += arr[i][j];
+    for(int r = 0; r < 3; r++){
+        for(int c = 0; c < 3; c++){
+            if(arr[r][c] > maxi){
+                maxi = arr[r][c];
+            }
         }
-        if(sum > maxi){
-            maxi = sum;
-            rowIndex = i;
-        }
-    }
-    cout << "The maximum sum is " << maxi << endl;
-    return rowIndex;
+    } return maxi; 
 }
+// Taking input from user
 int main(){
     int arr[3][3];
-    cout << "Enter the elements of an array" << endl;
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
-            cin >> arr[i][j];
+    cout << "Enter the elements of array:  " << endl;
+    for(int r = 0; r < 3; r++){
+        for(int c = 0; c < 3; c++){
+            cin >> arr[r][c];
         }
     }
-    cout << "Printing the 2D Array" << endl;
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
-            cout << arr[i][j] << " ";       
-            }
-            cout << endl;
+    // Printing an array 
+    cout << "Printing an array " << endl;
+    for(int r = 0; r < 3; r++){
+        for(int c = 0; c < 3; c++){
+            cout << arr[r][c] << " ";
         }
-        int ansIndex = largestRowSum(arr, 3, 3);
-        cout << "Max row at index " << ansIndex << endl;
+        cout << endl;
+    }
+    // Calling an function 
+    int maximumElement = maximumInArray(arr,3,3);
+    cout << "The maximum element in array is: " << maximumElement << endl;
 }
