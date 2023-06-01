@@ -1,25 +1,31 @@
-#include<iostream>
-using namespace std; 
-void subarray(int arr[], int size){
-    for(int sp=0; sp < size; sp++){
-        for(int ep = sp; ep <size; ep++){
-            for(int i = sp; i<=ep; i++){
-                cout << arr[i] << " ";
-            }
-            cout << endl;
+#include<bits/stdc++.h>
+using namespace std;
+
+// To print row wise sum
+void printSum(int arr[][3], int i, int j){
+    cout << "printing the sum " << endl; 
+    for(int i = 0; i < 3; i++){
+        int sum = 0;
+        for(int j = 0; j < 3; j++){
+            sum += arr[i][j];
         }
-    }
+        cout << sum << " ";
+    }   
 }
 int main(){
-    int n;
-    cout << "Enter the size of an array: ";
-    cin >> n;
+    int arr[3][3];
 
-    int arr[n];
-    for(int i = 0; i < n; i++){
-        cin >> arr[i];
+    cout << "Enter the elements of an array" << endl;
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cin >> arr[i][j];
+        }
     }
-    subarray(arr,n);
-    
-    return 0;
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+    printSum(arr, 3, 3);
 }

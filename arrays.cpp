@@ -206,4 +206,103 @@ int main(){
     return 0;
 }
 
+/* Printing an 2D Array */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int arr[3][4];
+    // Taking input from user
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 4; j++){
+            cin >> arr[i][j];
+        }
+    }
+    // Printing an array
+     for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 4; j++){
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+/* Searching an element in 2D array */
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isPresent(int arr[][4], int target, int row, int col){
+    for(int row = 0; row < 3; row++){
+        for(int col = 0; col < 4; col++){
+            if(arr[row][col] == target){
+                return 1;
+            }
+        }
+    }
+    return 0;   
+}
+// Taking input from user 
+int main(){
+    int arr[3][4];
+    cout << "Enter the elements for 2D array: " << endl;
+    for(int row = 0; row < 3; row++){
+        for(int col = 0; col < 4; col++){
+            cin >> arr[row][col];
+        }
+    }
+    // Printing an array
+     for(int row = 0; row < 3; row++){
+        for(int col = 0; col < 4; col++){
+            cout << arr[row][col] << " ";
+        }    
+        cout << endl;
+}
+// Taking input of an element to search 
+cout << "Enter the element to search" << endl;
+int target;
+cin >> target;
+
+if(isPresent(arr, target, 3, 4)){
+    cout << "Element found" << endl;
+}
+else{
+    cout << "Not found" << endl;
+}
+}
+
+/* Print the sum of rows in 2D array*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// To print row wise sum
+void printSum(int arr[][3], int i, int j){
+    cout << "printing the sum " << endl; 
+    for(int i = 0; i < 3; i++){
+        int sum = 0;
+        for(int j = 0; j < 3; j++){
+            sum += arr[i][j];
+        }
+        cout << sum << " ";
+    }   
+}
+int main(){
+    int arr[3][3];
+
+    cout << "Enter the elements of an array" << endl;
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cin >> arr[i][j];
+        }
+    }
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+    printSum(arr, 3, 3);
+}
+
 
